@@ -3,11 +3,11 @@
     "bet-types":{
         "player":{
             "multiplier":2.0,
-            "chance":0.45
+            "chance":0.44
         },
         "banker":{
             "multiplier":1.95,
-            "chance":0.45
+            "chance":0.50
         },
         "tie":{
             "multiplier":20.0,
