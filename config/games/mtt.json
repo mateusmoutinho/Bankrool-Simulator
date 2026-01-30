@@ -1,0 +1,46 @@
+{
+    "name": "Multi-Table Tournament",
+    "multi-bet-type": false,
+    "possible-results": [
+        {
+            "name": "1st place",
+            "chance": 0.001,
+            "multiplier": 1000.0
+        },
+        {
+            "name": "2nd place",
+            "chance": 0.001,
+            "multiplier": 600.0
+        },
+        {
+            "name": "3rd place",
+            "chance": 0.001,
+            "multiplier": 400.0
+        },
+        {
+            "name": "4th-6th place",
+            "chance": 0.003,
+            "multiplier": 200.0
+        },
+        {
+            "name": "7th-10th place",
+            "chance": 0.004,
+            "multiplier": 100.0
+        },
+        {
+            "name": "11th-20th place",
+            "chance": 0.010,
+            "multiplier": 50.0
+        },
+        {
+            "name": "21st-50th place",
+            "chance": 0.030,
+            "multiplier": 20.0
+        },
+        {
+            "name": "51st-100th place",
+            "chance": 0.050,
+            "multiplier": 10.0
+        }
+    ]
+}

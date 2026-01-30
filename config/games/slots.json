@@ -1,0 +1,41 @@
+{
+    "name": "Slots",
+    "multi-bet-type": false,
+    "possible-results": [
+        {
+            "name": "jackpot",
+            "chance": 0.0001,
+            "multiplier": 10000.0
+        },
+        {
+            "name": "big win",
+            "chance": 0.001,
+            "multiplier": 1000.0
+        },
+        {
+            "name": "major win",
+            "chance": 0.005,
+            "multiplier": 100.0
+        },
+        {
+            "name": "medium win",
+            "chance": 0.02,
+            "multiplier": 50.0
+        },
+        {
+            "name": "small win",
+            "chance": 0.05,
+            "multiplier": 10.0
+        },
+        {
+            "name": "mini win",
+            "chance": 0.10,
+            "multiplier": 5.0
+        },
+        {
+            "name": "tiny win",
+            "chance": 0.15,
+            "multiplier": 2.0
+        }
+    ]
+}
