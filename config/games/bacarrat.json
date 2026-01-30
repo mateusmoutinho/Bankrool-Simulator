@@ -1,0 +1,17 @@
+{
+    "name": "Baccarat",
+    "bet-types":{
+        "player":{
+            "multiplier":2.0,
+            "chance":0.45
+        },
+        "banker":{
+            "multiplier":1.95,
+            "chance":0.45
+        },
+        "tie":{
+            "multiplier":20.0,
+            "chance":0.05
+        }
+    }
+}
