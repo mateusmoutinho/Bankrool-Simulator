@@ -4,7 +4,6 @@
     "bet-types":{
         "player":[
             {
-                "result name":"Player Wins",
                 "multiplier":2.0,
                 "chance":0.44
             }
@@ -12,14 +11,12 @@
         ],
         "banker":[
             {
-                "result name":"Banker Wins",
                 "multiplier":1.95,
                 "chance":0.50
             }
         ],
         "tie":[
             {
-                "result name":"Tie",
                 "multiplier":20.0,
                 "chance":0.05
             }

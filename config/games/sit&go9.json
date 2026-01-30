@@ -1,8 +1,23 @@
 {
-    "name": "Sit & Go 8 Players",
+    "name": "Sit & Go 9 Players",
     "multi-bet-type":false,
 
     "possible-results":[
-        {}
+        {
+
+            "name":"first place",
+            "chance":0.09,
+            "multiplier":4
+        },
+        {
+            "name":"second place",
+            "chance":0.09,
+            "multiplier":3
+        },
+        {
+            "name":"third place",
+            "chance":0.09,
+            "multiplier":2
+        }
     ]
 }
