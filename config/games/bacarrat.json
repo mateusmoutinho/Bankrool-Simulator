@@ -1,25 +1,18 @@
 {
     "name": "Baccarat",
-    "multi-bet-type":true,
-    "bet-types":{
-        "player":[
-            {
-                "multiplier":2.0,
-                "chance":0.44
-            }
-    
-        ],
-        "banker":[
-            {
-                "multiplier":1.95,
-                "chance":0.50
-            }
-        ],
-        "tie":[
-            {
-                "multiplier":20.0,
-                "chance":0.05
-            }
-        ]
+    "multi-bet-type": true,
+    "bet-types": {
+        "player": {
+            "multiplier": 2.0,
+            "chance": 0.44
+        },
+        "banker": {
+            "multiplier": 1.95,
+            "chance": 0.50
+        },
+        "tie": {
+            "multiplier": 20.0,
+            "chance": 0.05
+        }
     }
 }
