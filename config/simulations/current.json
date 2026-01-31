@@ -1,0 +1,9 @@
+{
+    "name":"current",
+    "start-bankroll":1000,
+    "actions":[
+        {"type":"session","name":"high_bacara_session"},
+        {"type":"session","name":"high_bacara_session"},
+        {"type":"aport","amount":1000}
+    ]
+}
