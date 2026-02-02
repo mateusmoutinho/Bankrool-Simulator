@@ -4,7 +4,7 @@ from src import *
 TOTAL_SIMULATIONS = 100000
 SEED = 42,
 SIMULATION_DIR = "simulations-data",
-SIMULATION_NAME = ""Month Baccarat"
+SIMULATION_NAME = "Month Baccarat"
 ESPECIF_SIMULATION_VIEW = 3
 ``` 
 folow these steps:
