@@ -1,6 +1,6 @@
 import os
 import json
-from src.schema_validator import validate_game_schema
+from src.schema_validator import validate_game_schema,validate_session_schema
 
 loaded_data = {}
 
@@ -36,3 +36,8 @@ def find_game_by_name(dir:str,name:str)->dict:
     game = find_item_by_name(dir,name)
     validate_game_schema(game)
     return game
+
+def find_session_by_name(dir:str,name:str)->dict:
+    session = find_item_by_name(dir,name)
+    validate_session_schema(session)
+    return session
