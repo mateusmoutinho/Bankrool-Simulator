@@ -1,7 +1,7 @@
 {
     "name":"Avarage Baccarat",
     "stop-loss-size":50,    
-    "stop-win-size":150,
+    "stop-win-size":50,
     "bets":[
         {"game":"Baccarat","bet-type":"banker","bet-size":5,"min-quantity":20,"max-quantity":100}
     ]
