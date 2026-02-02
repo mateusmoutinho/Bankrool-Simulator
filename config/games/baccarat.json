@@ -4,19 +4,18 @@
     "bet-types": {
         "player": {
             "possible-results": [
-                {"name": "win", "chance": 0.44, "multiplier": 2.0},
-                {"name": "push", "chance": 0.06, "multiplier": 1.0}
+                {"name": "win", "chance": 0.48, "multiplier": 2.0}
             ]
         },
         "banker": {
             "possible-results": [
                 {"name": "win", "chance": 0.50, "multiplier": 1.95},
-                {"name": "push", "chance": 0.06, "multiplier": 1.0}
+                {"name": "tie", "chance": 0.095, "multiplier": 1.0}
             ]
         },
         "tie": {
             "possible-results": [
-                {"name": "win", "chance": 0.06, "multiplier": 20.0}
+                {"name": "win", "chance": 0.095, "multiplier": 8}
             ]
         }
     }
