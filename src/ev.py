@@ -1,3 +1,4 @@
+import os
 from .finder import find_game_by_name
 
 
@@ -18,8 +19,14 @@ def get_game_ev(games_dir: str, game_name: str) -> dict:
     return {"name": game['name'], "ev": _compute_ev(game['possible-results'])}
 
 def get_all_games_ev(games_dir: str) -> dict:
-    games = os.listdir(games_dir)
+    import json
     games_ev = {}
-    for game in games:
-        games_ev[game] = get_game_ev(games_dir, game)
+    for filename in os.listdir(games_dir):
+        if not filename.endswith('.json'):
+            continue
+        filepath = os.path.join(games_dir, filename)
+        with open(filepath, 'r', encoding='utf-8') as f:
+            game_name = json.load(f).get('name')
+        if game_name:
+            games_ev[game_name] = get_game_ev(games_dir, game_name)
     return games_ev
