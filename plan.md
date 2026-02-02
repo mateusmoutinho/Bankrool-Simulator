@@ -4,10 +4,11 @@ from src import *
 TOTAL_SIMULATIONS = 100000
 SEED = 42,
 SIMULATION_DIR = "simulations"
+ESPECIF_SIMULATION_VIEW = 3
 ``` 
 folow these steps:
 
-1 generate all simulations, and save into SIMULATION_DIR, if the SIMULATION_DIR alread exists, it dont make the simulations
+1 generate all simulations, and save into SIMULATION_DIR, with the name of simulation <simulation>.json if the SIMULATION_DIR alread exists, it dont make the simulations
 
 2 show all the game evs using the get_all_games_ev functions,
 
@@ -17,3 +18,4 @@ also, plot some graphics of the simulations results, including the bankroww evol
 4 plot 3 simulations, the most lost simulation, the most profitable simulation, and the "avarage" simulation, showing the bankroww evolution over the simulations, and the distribution of the results, 
 
  
+5. if is ESPECIF_SIMULATION_VIEW ,show that simulation number ,excalty.
