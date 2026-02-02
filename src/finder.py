@@ -1,5 +1,6 @@
 import os
 import json
+from src.schema_validator import validate_game_schema
 
 loaded_data = {}
 
@@ -29,3 +30,9 @@ def find_item_by_name(dir:str,name:str)->dict:
             return json_data
     
     raise ValueError(f"Item '{name}' not found in directory '{dir}'")   
+
+
+def find_game_by_name(dir:str,name:str)->dict:
+    game = find_item_by_name(dir,name)
+    validate_game_schema(game)
+    return game
