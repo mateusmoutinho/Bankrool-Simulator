@@ -1,8 +1,8 @@
 {
     "name":"High Baccarat",
-    "stop-loss":0.10,
-    "stop-win":0.20,
+    "stop-loss-size":50,
+    "stop-win-size":150,
     "bets":[
-        {"game":"Baccarat","bet-type":"banker","bet":5,"min-quantity":10,"max-quantity":10}
+        {"game":"Baccarat","bet-type":"banker","bet-size":5,"min-quantity":10,"max-quantity":10}
     ]
 }
