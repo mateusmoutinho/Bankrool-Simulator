@@ -1,3 +1,5 @@
+from .finder import find_game_by_name
+import random
 class Bank:
     def __init__(self, amount,config='config'):
         self.amount = amount
@@ -9,7 +11,7 @@ class Bank:
     def withdraw(self,amount):
         self.amount -= amount
     
-    def play(game:str,bet_type:str,amount:float)->float:
+    def play(self,game:str,bet_type:str,amount:float)->float:
         found_game = find_game_by_name(self.config,game)
        
         if found_game['multi-bet-type'] and not bet_type:
@@ -24,4 +26,7 @@ class Bank:
             possible_results = found_game['possible-results']
         
         
+        ## make a sorteio from 0 to 1 
+        sorteio = random.random()
         
+        print(sorteio)
