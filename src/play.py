@@ -1,4 +1,4 @@
-from .finder import find_game_by_name
+from .finder import find_game_by_name, find_simulation_by_name
 import random
     
 def play_game(games_dir:str,game:str,bet_type:str,amount:float)->dict:
@@ -129,5 +129,48 @@ def play_session(sessions_dir:str,games_dir:str,session:str,bankroll:float)->dic
                 'payment': game_result['payment'],
                 'bankroll': bankroll
             })
-    
+
+    return results
+
+def play_simulation(simulations_dir:str,sessions_dir:str,games_dir:str,simulation:str)->list:
+    sim_config = find_simulation_by_name(simulations_dir, simulation)
+    bankroll = sim_config['start-bankroll']
+
+    results = []
+
+    for action in sim_config['actions']:
+        action_type = action['type']
+
+        if action_type == 'play':
+            session_name = action['name']
+            session_result = play_session(sessions_dir, games_dir, session_name, bankroll)
+
+            if session_result:
+                bankroll = session_result[-1]['bankroll']
+
+            results.append({
+                'type': 'play',
+                'name': session_name,
+                'bets': session_result,
+                'bankroll': bankroll
+            })
+
+        elif action_type == 'withdraw':
+            size = action['size']
+            bankroll -= size
+            results.append({
+                'type': 'withdraw',
+                'size': size,
+                'bankroll': bankroll
+            })
+
+        elif action_type == 'aport':
+            size = action['size']
+            bankroll += size
+            results.append({
+                'type': 'aport',
+                'size': size,
+                'bankroll': bankroll
+            })
+
     return results

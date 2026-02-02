@@ -1,4 +1,4 @@
 from src import *
 
-r = play_session('config/sessions','config/games','Avarage Baccarat',1000)
+r = play_simulation('config/simulations','config/sessions','config/games','current')
 print(r)

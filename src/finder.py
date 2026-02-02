@@ -41,3 +41,6 @@ def find_session_by_name(dir:str,name:str)->dict:
     session = find_item_by_name(dir,name)
     validate_session_schema(session)
     return session
+
+def find_simulation_by_name(dir:str,name:str)->dict:
+    return find_item_by_name(dir,name)
