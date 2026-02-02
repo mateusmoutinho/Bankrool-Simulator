@@ -3,7 +3,8 @@
     "start-bankroll":1000,
     "actions":[
         {"type":"play","name":"Avarage Baccarat"},
+        {"type":"withdraw","size":200},
         {"type":"play","name":"Avarage Baccarat"},
-        {"type":"aport","amount":1000}
+        {"type":"aport","size":1000}
     ]
 }
