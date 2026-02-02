@@ -1,4 +1,6 @@
 class Bank:
-    def __init__(self, amount):
+    def __init__(self, amount,config='config'):
         self.amount = amount
-        
+        self.config = config
+
+    
