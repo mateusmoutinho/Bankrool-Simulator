@@ -12,7 +12,7 @@ class Bank:
         self.amount -= amount
     
     def play(self,game:str,bet_type:str,amount:float)->float:
-        found_game = find_game_by_name(self.config,game)
+        found_game = find_game_by_name(self.config+"/games",game)
        
         if found_game['multi-bet-type'] and not bet_type:
             raise ValueError("these game requires a bet type")
