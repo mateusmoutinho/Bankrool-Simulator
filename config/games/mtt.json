@@ -5,42 +5,77 @@
         {
             "name": "1st place",
             "chance": 0.001,
-            "multiplier": 1000.0
+            "multiplier": 155.0
         },
         {
             "name": "2nd place",
             "chance": 0.001,
-            "multiplier": 600.0
+            "multiplier": 112.0
         },
         {
             "name": "3rd place",
             "chance": 0.001,
-            "multiplier": 400.0
+            "multiplier": 82.0
         },
         {
-            "name": "4th-6th place",
-            "chance": 0.003,
-            "multiplier": 200.0
+            "name": "4th place",
+            "chance": 0.001,
+            "multiplier": 62.0
         },
         {
-            "name": "7th-10th place",
-            "chance": 0.004,
-            "multiplier": 100.0
+            "name": "5th place",
+            "chance": 0.001,
+            "multiplier": 47.0
         },
         {
-            "name": "11th-20th place",
-            "chance": 0.010,
-            "multiplier": 50.0
+            "name": "6th place",
+            "chance": 0.001,
+            "multiplier": 36.0
         },
         {
-            "name": "21st-50th place",
-            "chance": 0.030,
-            "multiplier": 20.0
+            "name": "7th place",
+            "chance": 0.001,
+            "multiplier": 27.0
         },
         {
-            "name": "51st-100th place",
-            "chance": 0.050,
+            "name": "8th place",
+            "chance": 0.001,
+            "multiplier": 21.0
+        },
+        {
+            "name": "9th place",
+            "chance": 0.001,
+            "multiplier": 16.0
+        },
+        {
+            "name": "10th-15th place",
+            "chance": 0.006,
             "multiplier": 10.0
+        },
+        {
+            "name": "16th-27th place",
+            "chance": 0.012,
+            "multiplier": 6.5
+        },
+        {
+            "name": "28th-45th place",
+            "chance": 0.018,
+            "multiplier": 4.3
+        },
+        {
+            "name": "46th-72nd place",
+            "chance": 0.027,
+            "multiplier": 2.7
+        },
+        {
+            "name": "73rd-108th place",
+            "chance": 0.036,
+            "multiplier": 1.9
+        },
+        {
+            "name": "109th-150th place (min cash)",
+            "chance": 0.042,
+            "multiplier": 1.3
         }
     ]
 }
