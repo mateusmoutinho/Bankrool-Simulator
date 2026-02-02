@@ -1,5 +1,4 @@
-from src import Bank
+from src import play_game
 
-bank = Bank(1000)
 
-bank.play('Baccarat','player',100)
+play_game('config/games','Baccarat','player',100)

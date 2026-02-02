@@ -1,1 +1,1 @@
-from .Bank import Bank
+from .play import play_game
