@@ -3,10 +3,11 @@ create the "simulation.ipynb" file that will be a jupyter notebook that will be 
 from src import *
 TOTAL_SIMULATIONS = 100000
 SEED = 42,
-SIMULATION_DIR = "simulations"
+SIMULATION_DIR = "simulations-data"
 ESPECIF_SIMULATION_VIEW = 3
 ``` 
 folow these steps:
+
 
 1 generate all simulations, and save into SIMULATION_DIR, with the name of simulation <simulation>.json if the SIMULATION_DIR alread exists, it dont make the simulations
 
