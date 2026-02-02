@@ -1,0 +1,84 @@
+{
+    "name": "Roulette",
+    "multi-bet-type": true,
+    "bet-types": {
+        "straight": {
+            "description": "Bet on a single number (0-36)",
+            "possible-results": [
+                {"name": "win", "chance": 0.027027, "multiplier": 36.0}
+            ]
+        },
+        "split": {
+            "description": "Bet on two adjacent numbers",
+            "possible-results": [
+                {"name": "win", "chance": 0.054054, "multiplier": 18.0}
+            ]
+        },
+        "street": {
+            "description": "Bet on three numbers in a horizontal line",
+            "possible-results": [
+                {"name": "win", "chance": 0.081081, "multiplier": 12.0}
+            ]
+        },
+        "corner": {
+            "description": "Bet on four numbers forming a square",
+            "possible-results": [
+                {"name": "win", "chance": 0.108108, "multiplier": 9.0}
+            ]
+        },
+        "line": {
+            "description": "Bet on six numbers (two horizontal lines)",
+            "possible-results": [
+                {"name": "win", "chance": 0.162162, "multiplier": 6.0}
+            ]
+        },
+        "column": {
+            "description": "Bet on a column (12 numbers)",
+            "possible-results": [
+                {"name": "win", "chance": 0.324324, "multiplier": 3.0}
+            ]
+        },
+        "dozen": {
+            "description": "Bet on a dozen (1-12, 13-24, 25-36)",
+            "possible-results": [
+                {"name": "win", "chance": 0.324324, "multiplier": 3.0}
+            ]
+        },
+        "red": {
+            "description": "Bet on red numbers",
+            "possible-results": [
+                {"name": "win", "chance": 0.486486, "multiplier": 2.0}
+            ]
+        },
+        "black": {
+            "description": "Bet on black numbers",
+            "possible-results": [
+                {"name": "win", "chance": 0.486486, "multiplier": 2.0}
+            ]
+        },
+        "odd": {
+            "description": "Bet on odd numbers",
+            "possible-results": [
+                {"name": "win", "chance": 0.486486, "multiplier": 2.0}
+            ]
+        },
+        "even": {
+            "description": "Bet on even numbers",
+            "possible-results": [
+                {"name": "win", "chance": 0.486486, "multiplier": 2.0}
+            ]
+        },
+        "low": {
+            "description": "Bet on low numbers (1-18)",
+            "possible-results": [
+                {"name": "win", "chance": 0.486486, "multiplier": 2.0}
+            ]
+        },
+        "high": {
+            "description": "Bet on high numbers (19-36)",
+            "possible-results": [
+                {"name": "win", "chance": 0.486486, "multiplier": 2.0}
+            ]
+        }
+    }
+}

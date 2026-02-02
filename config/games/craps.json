@@ -1,0 +1,148 @@
+{
+    "name": "Craps",
+    "multi-bet-type": true,
+    "bet-types": {
+        "pass-line": {
+            "description": "Bet on shooter winning (7 or 11 on come-out, point before 7)",
+            "possible-results": [
+                {"name": "win", "chance": 0.492929, "multiplier": 2.0}
+            ]
+        },
+        "dont-pass": {
+            "description": "Bet against shooter (2 or 3 on come-out, 7 before point, 12 pushes)",
+            "possible-results": [
+                {"name": "win", "chance": 0.479293, "multiplier": 2.0},
+                {"name": "push", "chance": 0.027778, "multiplier": 1.0}
+            ]
+        },
+        "come": {
+            "description": "Same as pass line but made after point is established",
+            "possible-results": [
+                {"name": "win", "chance": 0.492929, "multiplier": 2.0}
+            ]
+        },
+        "dont-come": {
+            "description": "Same as don't pass but made after point is established",
+            "possible-results": [
+                {"name": "win", "chance": 0.479293, "multiplier": 2.0},
+                {"name": "push", "chance": 0.027778, "multiplier": 1.0}
+            ]
+        },
+        "field": {
+            "description": "One-roll bet on 2, 3, 4, 9, 10, 11, 12 (2 and 12 pay extra)",
+            "possible-results": [
+                {"name": "win-normal", "chance": 0.388889, "multiplier": 2.0},
+                {"name": "win-double", "chance": 0.027778, "multiplier": 3.0},
+                {"name": "win-triple", "chance": 0.027778, "multiplier": 4.0}
+            ]
+        },
+        "any-seven": {
+            "description": "One-roll bet that next roll is 7",
+            "possible-results": [
+                {"name": "win", "chance": 0.166667, "multiplier": 5.0}
+            ]
+        },
+        "any-craps": {
+            "description": "One-roll bet on 2, 3, or 12",
+            "possible-results": [
+                {"name": "win", "chance": 0.111111, "multiplier": 8.0}
+            ]
+        },
+        "craps-2": {
+            "description": "One-roll bet on 2 (snake eyes)",
+            "possible-results": [
+                {"name": "win", "chance": 0.027778, "multiplier": 31.0}
+            ]
+        },
+        "craps-3": {
+            "description": "One-roll bet on 3",
+            "possible-results": [
+                {"name": "win", "chance": 0.055556, "multiplier": 16.0}
+            ]
+        },
+        "craps-12": {
+            "description": "One-roll bet on 12 (boxcars)",
+            "possible-results": [
+                {"name": "win", "chance": 0.027778, "multiplier": 31.0}
+            ]
+        },
+        "yo-eleven": {
+            "description": "One-roll bet on 11",
+            "possible-results": [
+                {"name": "win", "chance": 0.055556, "multiplier": 16.0}
+            ]
+        },
+        "hard-4": {
+            "description": "Bet on 2-2 before 7 or easy 4",
+            "possible-results": [
+                {"name": "win", "chance": 0.111111, "multiplier": 8.0}
+            ]
+        },
+        "hard-6": {
+            "description": "Bet on 3-3 before 7 or easy 6",
+            "possible-results": [
+                {"name": "win", "chance": 0.090909, "multiplier": 10.0}
+            ]
+        },
+        "hard-8": {
+            "description": "Bet on 4-4 before 7 or easy 8",
+            "possible-results": [
+                {"name": "win", "chance": 0.090909, "multiplier": 10.0}
+            ]
+        },
+        "hard-10": {
+            "description": "Bet on 5-5 before 7 or easy 10",
+            "possible-results": [
+                {"name": "win", "chance": 0.111111, "multiplier": 8.0}
+            ]
+        },
+        "place-4": {
+            "description": "Bet that 4 rolls before 7",
+            "possible-results": [
+                {"name": "win", "chance": 0.333333, "multiplier": 2.8}
+            ]
+        },
+        "place-5": {
+            "description": "Bet that 5 rolls before 7",
+            "possible-results": [
+                {"name": "win", "chance": 0.400000, "multiplier": 2.4}
+            ]
+        },
+        "place-6": {
+            "description": "Bet that 6 rolls before 7",
+            "possible-results": [
+                {"name": "win", "chance": 0.454545, "multiplier": 2.166667}
+            ]
+        },
+        "place-8": {
+            "description": "Bet that 8 rolls before 7",
+            "possible-results": [
+                {"name": "win", "chance": 0.454545, "multiplier": 2.166667}
+            ]
+        },
+        "place-9": {
+            "description": "Bet that 9 rolls before 7",
+            "possible-results": [
+                {"name": "win", "chance": 0.400000, "multiplier": 2.4}
+            ]
+        },
+        "place-10": {
+            "description": "Bet that 10 rolls before 7",
+            "possible-results": [
+                {"name": "win", "chance": 0.333333, "multiplier": 2.8}
+            ]
+        },
+        "big-6": {
+            "description": "Bet that 6 rolls before 7",
+            "possible-results": [
+                {"name": "win", "chance": 0.454545, "multiplier": 2.0}
+            ]
+        },
+        "big-8": {
+            "description": "Bet that 8 rolls before 7",
+            "possible-results": [
+                {"name": "win", "chance": 0.454545, "multiplier": 2.0}
+            ]
+        }
+    }
+}
