@@ -1,4 +1,5 @@
 from .finder import find_game_by_name
+from .GameResult import GameResult
 import random
 class Bank:
     def __init__(self, amount,config='config'):
@@ -10,8 +11,9 @@ class Bank:
 
     def withdraw(self,amount):
         self.amount -= amount
+        
     
-    def play(self,game:str,bet_type:str,amount:float)->float:
+    def play(self,game:str,bet_type:str,amount:float)->GameResult:
         found_game = find_game_by_name(self.config+"/games",game)
        
         if found_game['multi-bet-type'] and not bet_type:
