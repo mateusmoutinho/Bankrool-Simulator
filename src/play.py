@@ -1,5 +1,5 @@
 from .finder import find_game_by_name, find_simulation_by_name
-import random
+import secrets
     
 def play_game(games_dir:str,game:str,bet_type:str,amount:float)->dict:
     found_game = find_game_by_name(games_dir,game)
@@ -17,7 +17,7 @@ def play_game(games_dir:str,game:str,bet_type:str,amount:float)->dict:
     
     
     ## make a sorteio from 0 to 1 
-    sorteio = random.random()
+    sorteio = secrets.SystemRandom().random()
     acumulated = 0
     for result in possible_results:
         if sorteio <= acumulated + result['chance']:
@@ -85,7 +85,7 @@ def play_session(sessions_dir:str,games_dir:str,session:str,bankroll:float)->dic
         max_quantity = bet_config.get('max-quantity', min_quantity)
         
         # Random quantity between min and max
-        quantity = random.randint(min_quantity, max_quantity)
+        quantity = secrets.SystemRandom().randint(min_quantity, max_quantity)
         
         # Place bets
         for _ in range(quantity):
