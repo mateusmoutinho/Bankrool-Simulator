@@ -11,9 +11,15 @@ class Bank:
     
     def play(game:str,bet_type:str,amount:float)->float:
         found_game = find_game_by_name(self.config,game)
+       
+        if found_game['multi-bet-type'] and not bet_type:
+            raise ValueError("these game requires a bet type")
 
-        if bet_type:
-            possible_results = found_game['bet-types'][bet_type]['possible-results']
+        if found_game['multi-bet-type']:
+            try:
+                possible_results = found_game['bet-types'][bet_type]['possible-results']
+            except:
+                raise ValueError(f"Bet type '{bet_type}' not found in game '{game}'")
         else:
             possible_results = found_game['possible-results']
         
