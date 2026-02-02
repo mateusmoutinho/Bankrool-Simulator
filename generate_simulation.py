@@ -1,4 +1,4 @@
 from src import play_game
 
-
-print(play_game('config/games','Baccarat','player',100))
+for x in range(100):
+    print(play_game('config/games','Baccarat','player',100))

@@ -20,9 +20,9 @@ def play_game(games_dir:str,game:str,bet_type:str,amount:float)->dict:
     sorteio = random.random()
     acumulated = 0
     for result in possible_results:
-        if sorteio < acumulated + result['chance']:
+        if sorteio <= acumulated + result['chance']:
             return {
-                "result":result['name'],
+                "result":result['name'],    
                 "payment":amount*result['multiplier']
                 }
         acumulated += result['chance']
