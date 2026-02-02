@@ -16,3 +16,10 @@ def get_game_ev(games_dir: str, game_name: str) -> dict:
         return {"name": game['name'], "bet-types": bet_types}
 
     return {"name": game['name'], "ev": _compute_ev(game['possible-results'])}
+
+def get_all_games_ev(games_dir: str) -> dict:
+    games = os.listdir(games_dir)
+    games_ev = {}
+    for game in games:
+        games_ev[game] = get_game_ev(games_dir, game)
+    return games_ev
