@@ -1,4 +1,4 @@
-from src import play_game
+from src import *
 
-for x in range(100):
-    print(play_game('config/games','Baccarat','player',100))
+r = play_session('config/sessions','config/games','Avarage Baccarat',100)
+print(r)
