@@ -1,0 +1,37 @@
+{
+    "name":"Month Baccarat",
+    "start-bankroll":1000,
+    "actions":[
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"},
+        {"type":"play","name":"Avarage Baccarat"}
+
+    ]
+}
