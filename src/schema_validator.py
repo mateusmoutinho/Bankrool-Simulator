@@ -228,3 +228,128 @@ def _validate_single_bet_game(game: dict) -> None:
             f"Game '{game_name}' total chance across all results cannot exceed 1.0 "
             f"(got {total_chance:.4f})"
         )
+
+
+def validate_session_schema(session: dict) -> bool:
+    """
+    Validates session schema.
+    
+    Rules:
+    - 'name' is required
+    - At least one of: stop-loss-size, stop-loss-percent, stop-gain-percent is required
+    - Percent fields (stop-loss-percent, stop-gain-percent) must be >0 and <1
+    - 'bets' is required and must be a non-empty list
+    - Each bet must have either 'bet-size' or 'bet-percent' (one is required)
+    - bet-percent must be >0 and <1
+    
+    Args:
+        session: Dictionary containing session configuration
+        
+    Returns:
+        bool: True if schema is valid
+        
+    Raises:
+        ValueError: If schema validation fails with detailed error message
+    """
+    # Check that session is a dictionary
+    if not isinstance(session, dict):
+        raise ValueError("Session must be a dictionary")
+    
+    # Validate name field
+    if "name" not in session:
+        raise ValueError("Session must have a 'name' field")
+    
+    if not isinstance(session["name"], str) or not session["name"].strip():
+        raise ValueError("Session 'name' must be a non-empty string")
+    
+    session_name = session["name"]
+    
+    # Validate stop-loss-size if present (optional)
+    if "stop-loss-size" in session:
+        stop_loss_size = session["stop-loss-size"]
+        if not isinstance(stop_loss_size, (int, float)):
+            raise ValueError(
+                f"Session '{session_name}' 'stop-loss-size' must be a number"
+            )
+        if stop_loss_size <= 0:
+            raise ValueError(
+                f"Session '{session_name}' 'stop-loss-size' must be greater than 0"
+            )
+    
+    # Validate stop-loss-percent if present (optional)
+    if "stop-loss-percent" in session:
+        stop_loss_percent = session["stop-loss-percent"]
+        if not isinstance(stop_loss_percent, (int, float)):
+            raise ValueError(
+                f"Session '{session_name}' 'stop-loss-percent' must be a number"
+            )
+        if not (0 < stop_loss_percent < 1):
+            raise ValueError(
+                f"Session '{session_name}' 'stop-loss-percent' must be greater than 0 and less than 1"
+            )
+    
+    # Validate stop-gain-percent if present (optional)
+    if "stop-gain-percent" in session:
+        stop_gain_percent = session["stop-gain-percent"]
+        if not isinstance(stop_gain_percent, (int, float)):
+            raise ValueError(
+                f"Session '{session_name}' 'stop-gain-percent' must be a number"
+            )
+        if not (0 < stop_gain_percent < 1):
+            raise ValueError(
+                f"Session '{session_name}' 'stop-gain-percent' must be greater than 0 and less than 1"
+            )
+    
+    # Validate bets field
+    if "bets" not in session:
+        raise ValueError(f"Session '{session_name}' must have a 'bets' field")
+    
+    bets = session["bets"]
+    
+    if not isinstance(bets, list):
+        raise ValueError(f"Session '{session_name}' 'bets' must be a list")
+    
+    if not bets:
+        raise ValueError(f"Session '{session_name}' must have at least one bet")
+    
+    # Validate each bet
+    for idx, bet in enumerate(bets):
+        if not isinstance(bet, dict):
+            raise ValueError(
+                f"Session '{session_name}' bet at index {idx} must be a dictionary"
+            )
+        
+        # Check that bet has either bet-size or bet-percent
+        has_bet_size = "bet-size" in bet
+        has_bet_percent = "bet-percent" in bet
+        
+        if not (has_bet_size or has_bet_percent):
+            raise ValueError(
+                f"Session '{session_name}' bet at index {idx} must have either 'bet-size' or 'bet-percent'"
+            )
+        
+        # Validate bet-size if present
+        if has_bet_size:
+            bet_size = bet["bet-size"]
+            if not isinstance(bet_size, (int, float)):
+                raise ValueError(
+                    f"Session '{session_name}' bet at index {idx} 'bet-size' must be a number"
+                )
+            if bet_size <= 0:
+                raise ValueError(
+                    f"Session '{session_name}' bet at index {idx} 'bet-size' must be greater than 0"
+                )
+        
+        # Validate bet-percent if present
+        if has_bet_percent:
+            bet_percent = bet["bet-percent"]
+            if not isinstance(bet_percent, (int, float)):
+                raise ValueError(
+                    f"Session '{session_name}' bet at index {idx} 'bet-percent' must be a number"
+                )
+            if not (0 < bet_percent < 1):
+                raise ValueError(
+                    f"Session '{session_name}' bet at index {idx} 'bet-percent' must be greater than 0 and less than 1"
+                )
+    
+    return True
