@@ -3,7 +3,6 @@
     "stop-loss-size":50,    
     "stop-win-size":150,
     "bets":[
-        {"game":"Baccarat","bet-type":"banker","bet-size":50,"min-quantity":10,"max-quantity":30},
-        {"game":"Baccarat","bet-type":"banker","bet-size":100,"min-quantity":5,"max-quantity":5}
+        {"game":"Baccarat","bet-type":"banker","bet-size":5,"min-quantity":20,"max-quantity":100},
     ]
 }
