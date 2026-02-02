@@ -3,6 +3,6 @@
     "stop-loss":0.10,
     "stop-win":0.20,
     "bets":[
-        {"game":"bacarrat","bet-type":"banker","amount":0.01,"min-quantity":10,"max-quantity":10}
+        {"game":"bacarrat","bet-type":"banker","bet":5,"min-quantity":10,"max-quantity":10}
     ]
 }
